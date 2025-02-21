@@ -1,0 +1,42 @@
+.home-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.attempt-history {
+    margin: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+.leaderboard-btn {
+    margin-top: 20px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+}
+
+.leaderboard-btn:hover {
+    background-color: #0056b3;
+}

@@ -25,7 +25,6 @@
     margin-right: auto;
 }
 
-
 h2 {
     color: #333;
     font-size: 24px;
@@ -46,13 +45,13 @@ p {
     right: 20px;
 }
 
-.question-desc{
+.question-desc {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
-.question-desc div{
-    width:100%;
+.question-desc div {
+    width: 100%;
     justify-content: space-around;
 }
 
@@ -66,7 +65,7 @@ p {
     color: #222;
 }
 
-button {
+.option-button {
     width: 100%;
     padding: 12px;
     margin: 8px 0;
@@ -79,14 +78,34 @@ button {
     transition: background 0.3s ease-in-out;
 }
 
-button:hover {
+.option-button:hover {
     background-color: #0056b3;
 }
 
-button.selected {
-    background-color: #28a745 !important;
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
 }
 
+/* Selected Answer (Before Submission) */
+.option-button.selected {
+    background-color: #ffc107 !important;
+    color: black;
+}
+
+/* Correct Answer (After Submission) */
+.option-button.correct {
+    background-color: #28a745 !important;
+    color: white;
+}
+
+/* Incorrect Answer (After Submission) */
+.option-button.wrong {
+    background-color: #dc3545 !important;
+    color: white;
+}
+
+/* Input Styling */
 input {
     width: 90%;
     margin: 8px 0;
@@ -109,7 +128,7 @@ input {
     margin-top: 10px;
 }
 
-  /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
     .quiz-container {
         max-width: 90%;
@@ -125,7 +144,7 @@ input {
         right: 10px;
     }
 
-    button {
+    .option-button {
         font-size: 14px;
         padding: 10px;
     }

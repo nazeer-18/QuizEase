@@ -37,12 +37,14 @@
     padding: 10px;
     text-align: left;
     font-size: 16px;
+    text-align: center;
 }
 
 /* Table rows */
 .leaderboard-table td {
     padding: 10px;
     border-bottom: 1px solid #ddd;
+    text-align: center;
 }
 
 /* Alternate row colors */

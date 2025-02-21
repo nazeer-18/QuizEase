@@ -1,5 +1,6 @@
 const express = require("express");
 const Quiz = require("../models/Quiz");
+const Leaderboard = require("../models/Leaderboard");
 
 const router = express.Router();
 
@@ -43,5 +44,22 @@ router.get('/give-quiz/:quizId', async (req, res) => {
         res.status(500).json({ message: "Internal Server Error" });
     }
 })
+
+// Route to get user's quiz attempt history
+router.get("/user-attempts/:userId/:quizId", async (req, res) => {
+    try {
+        const { userId, quizId } = req.params;
+        // Fetch all attempts by the user for the given quiz, sorted by latest first
+        const leaderboardEntry = await Leaderboard.findOne({ quiz: quizId });
+        if (leaderboardEntry) {
+            const userRanking = leaderboardEntry.rankings.find(rank => rank.user.toString() === userId);
+            return res.status(200).json((userRanking.scores).reverse());
+        }
+        return res.status(409).json({message:"No Leaderboard found for the quiz"});
+    } catch (error) {
+        console.error("Error fetching quiz attempts:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
+});
 
 module.exports = router;

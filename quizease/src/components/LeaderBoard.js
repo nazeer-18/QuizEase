@@ -38,12 +38,12 @@ const Leaderboard = () => {
                         <tr>
                             <th>Rank</th>
                             <th>User</th>
-                            <th>Score</th>
+                            <th>Best Score</th>
                         </tr>
                     </thead>
                     <tbody>
                         {leaderboard
-                            .sort((a, b) => b.score - a.score)
+                            .sort((a, b) => b.maxScore - a.maxScore)
                             .map((entry, index) => (
                                 <tr key={index}>
                                     <td>{index + 1}</td>
