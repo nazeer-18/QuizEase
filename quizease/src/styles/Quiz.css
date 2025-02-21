@@ -1,0 +1,136 @@
+.quiz-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+.quiz-error {
+    text-align: center;
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #ffe6e6;
+    border: 1px solid red;
+    border-radius: 8px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #555;
+    font-size: 16px;
+}
+
+.timer {
+    font-size: 18px;
+    font-weight: bold;
+    color: #d9534f;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+}
+
+.question-desc{
+    display: flex;
+    justify-content: center; 
+}
+
+.question-desc div{
+    width:100%;
+    justify-content: space-around;
+}
+
+.question-box {
+    margin: 20px 0;
+}
+
+.question-box p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #222;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button.selected {
+    background-color: #28a745 !important;
+}
+
+input {
+    width: 90%;
+    margin: 8px 0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.correct {
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.incorrect {
+    color: #d9534f;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+  /* Responsive Design */
+@media (max-width: 768px) {
+    .quiz-container {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .timer {
+        font-size: 16px;
+        right: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
